@@ -1,7 +1,8 @@
 use serde::{Serialize, Deserialize};
 
-pub struct Snippets {
-    snippets: Vec<Snippet>,
+#[derive(Serialize, Deserialize)]
+pub struct SnippetFile {
+    pub snippets: Vec<Snippet>
 }
 
 #[derive(PartialEq, Eq, PartialOrd, Ord, Clone, Serialize, Deserialize)]
